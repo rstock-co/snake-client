@@ -26,6 +26,15 @@ const handleUserInput = (data) => {
   if (data === 'd') {
     connection.write(`${move.right}`)
   }
+  if (data === 'p') {
+    connection.write(`Say: I love Python!`)
+  }
+  if (data === 'h') {
+    connection.write(`Say: Hisssssterical`)
+  }
+  if (data === 'y') {
+    connection.write(`Say: Yo yo yo!`)
+  }
 };
 
 const setupInput = (conn) => {
