@@ -2,12 +2,7 @@
 let connection;
 // console.log('upon declaration: ',connection)
 
-const move = {
-  up: "Move: up",
-  down: "Move: down",
-  left: "Move: left",
-  right: "Move: right",
-};
+const { UP, DOWN, RIGHT, LEFT, MESSAGES } = require('./constants');
 
 const handleUserInput = (data) => {
   // console.log('in user input: ',connection)
@@ -15,25 +10,25 @@ const handleUserInput = (data) => {
     process.exit();
   }
   if (data === 'w') {
-    connection.write(`${move.up}`)
+    connection.write(UP);
   }
   if (data === 'a') {
-    connection.write(`${move.left}`)
+    connection.write(LEFT);
   }
   if (data === 's') {
-    connection.write(`${move.down}`)
+    connection.write(DOWN);
   }
   if (data === 'd') {
-    connection.write(`${move.right}`)
+    connection.write(RIGHT);
   }
   if (data === 'p') {
-    connection.write(`Say: I love Python!`)
+    connection.write(MESSAGES.p);
   }
   if (data === 'h') {
-    connection.write(`Say: Hisssssterical`)
+    connection.write(MESSAGES.h);
   }
   if (data === 'y') {
-    connection.write(`Say: Yo yo yo!`)
+    connection.write(MESSAGES.y);
   }
 };
 
